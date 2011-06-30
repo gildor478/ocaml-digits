@@ -1,0 +1,5 @@
+(* OASIS_START *)
+(* DO NOT EDIT (digest: 69332c25ea91d0bae41ad58a74b41a44) *)
+Authors of ocaml-digits
+Sylvain Le Gall
+(* OASIS_STOP *)

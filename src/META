@@ -1,0 +1,17 @@
+# OASIS_START
+# DO NOT EDIT (digest: 1c4ac5a35b0215837d327e93cb9bd07c)
+version = "0.0.1"
+description = "Manipulate digit of a number in various base"
+archive(byte) = "digits.cma"
+archive(native) = "digits.cmxa"
+exists_if = "digits.cma"
+package "num" (
+ version = "0.0.1"
+ description = "Manipulate digit of a number in various base"
+ requires = "num"
+ archive(byte) = "digits-num.cma"
+ archive(native) = "digits-num.cmxa"
+ exists_if = "digits-num.cma"
+)
+# OASIS_STOP
+

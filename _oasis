@@ -1,0 +1,43 @@
+OASISFormat: 0.2
+Name:        ocaml-digits 
+Version:     0.0.1
+Synopsis:    Manipulate digit of a number in various base
+Authors:     Sylvain Le Gall
+License:     LGPL-2.1 with OCaml linking exception
+Plugins:     DevFiles (0.2), META (0.2), StdFiles (0.2)
+BuildTools:  ocamlbuild
+
+Description:
+ This library provides very simple functions to extract digits
+ of numbers in various base.
+
+Library digits
+  Path:       src
+  Modules:    Digits
+  
+Library "digits-num"
+  Path:          src
+  Modules:       DigitsNum
+  BuildDepends:  num
+  FindlibParent: digits
+  FindlibName:   num
+  
+Executable test
+  Path:         test
+  BuildTools:   ocamlbuild
+  MainIs:       test.ml
+  BuildDepends: oUnit, digits, digits.num
+  Install:      false
+  
+Test main
+  Command: $test
+  TestTools: test
+  
+Document "api-digits"
+  Title:      API reference for Digits
+  Type:       ocamlbuild (0.2)
+  InstallDir: $htmldir/digits
+  XOCamlbuildPath: src/
+  XOCamlbuildLibraries: digits, digits.num
+  BuildTools+: ocamldoc
+  
