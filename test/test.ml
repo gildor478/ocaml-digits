@@ -1,5 +1,6 @@
 
 open OUnit
+open Big_int
 
 let _ :: _ | [] = 
   run_test_tt_main
@@ -22,5 +23,8 @@ let _ :: _ | [] =
             (Digits.of_int ~base:2 1234);
           assert_digits
             [4; 13; 2]
-            (Digits.of_int ~base:16 1234)
+            (Digits.of_int ~base:16 1234);
+          assert_digits
+            [1; 9; 6]
+            (DigitsBig_int.of_big_int (big_int_of_int 196));
      ))

@@ -17,7 +17,7 @@ Library digits
   
 Library "digits-num"
   Path:          src
-  Modules:       DigitsNum
+  Modules:       DigitsNum, DigitsBig_int
   BuildDepends:  num
   FindlibParent: digits
   FindlibName:   num
